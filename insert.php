@@ -14,6 +14,21 @@ $activationcode=md5($Email.time());
 
 //echo 'Name = '.$Name.' ~~ Email = '.$Email.' ~~ Password = '.$Password.' ~~ activationcode = '.$activationcode;
 
+//check if username and email is laready exist or not
+$select = mysqli_query($conn,"SELECT * FROM Usertable WHERE email='$Email' and username='$Username'");
+$run    = mysqli_fetch_array($select);
+if($run>0)
+{
+	if($Email == $run['email']){
+	   echo 2;	
+	}
+	if($Username == $run['username']){
+		echo 3;
+	}
+	
+}
+else {
+
 //insert query
 $query = "INSERT INTO Usertable (username,firstname,lastname,email,password,activationcode,status) VALUES ('$Username','$Name','$LastName','$Email','$Password','$activationcode','$status')";
 $result = mysqli_query($conn, $query);
@@ -63,6 +78,6 @@ if($result === True){
     echo false;
   }
 
-
+}
 
 ?>
