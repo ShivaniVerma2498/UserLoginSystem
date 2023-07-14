@@ -70,7 +70,7 @@ $login = $_SESSION['login'];
 <body>
     <!-- Navigation-->
     <!-- Navigation-->
-    <nav class="navbar navbar-light bg-light static-top">
+    <nav class="navbar navbar-light bg-light static-top newone">
         <div class="container">
             <a class="navbar-brand" href="index.php">Shivani</a>
             <?php
