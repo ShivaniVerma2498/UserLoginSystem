@@ -163,6 +163,9 @@
 					if(data == 3){
 						$("#msg").html("<b style='color:red; padding: 0px 5px; font-size: 16px;'>Username Already Exists.</b>");
 				    }
+					if(data == 4){
+						$("#msg").html("<b style='color:red; padding: 0px 5px; font-size: 16px;'>Username And Email Already Exists.</b>");
+				    }
                 }
 			});
 		}
